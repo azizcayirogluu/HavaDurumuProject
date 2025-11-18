@@ -1,5 +1,5 @@
 const url = "https://api.openweathermap.org/data/2.5";
-const key = "0607506d6721fe2c75e75dc4019bfd88";
+const key = "gizliliknedeniylekaldirilmistir";
 
 const setQuery = (e) => {
   if (e.key === "Enter") getResult(searchBar.value);
@@ -35,3 +35,4 @@ const displayResult = (result) => {
 
 const searchBar = document.getElementById("searchBar");
 searchBar.addEventListener("keydown", setQuery);
+
