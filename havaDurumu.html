@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hava Durumu</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <div class="header">
-        <h1>Hava Durumu</h1>
-        <input type="text" id="searchBar" placeholder="Şehir Yazınız..." />
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCast | Kurumsal Hava Durumu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="weather-card">
+      <div class="search-box">
+        <input type="text" id="searchBar" placeholder="Şehir ismini giriniz..." spellcheck="false">
+        <button id="searchBtn">Ara</button>
       </div>
 
-      <div class="content">
-        <div class="city">Sehir Girilmedi</div>
-        <div class="temp">0°</div>
-        <div class="desc"></div>
-        <div class="minmax"></div>
+      <div class="weather-body" id="weatherBody" style="display: none;">
+        <div class="date" id="date">25 Aralık 2025</div>
+        <h2 class="city" id="city">İstanbul, TR</h2>
+
+        <div class="main-info">
+          <img src="" alt="Hava Durumu İkonu" id="icon" class="weather-icon">
+          <div class="temp" id="temp">22°C</div>
+        </div>
+
+        <div class="desc" id="desc">Parçalı Bulutlu</div>
+
+        <div class="details">
+          <div class="col">
+            <span class="label">Min / Max</span>
+            <span id="minmax">18°C / 24°C</span>
+          </div>
+          <div class="col">
+            <span class="label">Nem</span>
+            <span id="humidity">%45</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="welcome-msg" id="welcomeMsg">
+        <p>Hava durumunu öğrenmek için bir şehir arayın.</p>
       </div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
