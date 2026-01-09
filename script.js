@@ -1,6 +1,3 @@
-const url = "https://api.openweathermap.org/data/2.5/";
-const key = "0607506d6721fe2c75e75dc4019bfd88";
-
 const searchBar = document.getElementById("searchBar");
 const searchBtn = document.getElementById("searchBtn");
 const weatherBody = document.getElementById("weatherBody");
@@ -29,11 +26,9 @@ const getResult = (cityName) => {
 };
 
 const displayResult = (result) => {
-  // Arayüzü Göster
   welcomeMsg.style.display = "none";
   weatherBody.style.display = "block";
 
-  // Şehir ve Tarih
   document.getElementById(
     "city"
   ).innerText = `${result.name}, ${result.sys.country}`;
@@ -45,7 +40,6 @@ const displayResult = (result) => {
     options
   );
 
-  // Sıcaklık ve İkon
   document.getElementById("temp").innerText = `${Math.round(
     result.main.temp
   )}°C`;
@@ -56,16 +50,15 @@ const displayResult = (result) => {
     "icon"
   ).src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
 
-  // Detaylar
   document.getElementById("minmax").innerText = `${Math.round(
     result.main.temp_min
   )}° / ${Math.round(result.main.temp_max)}°`;
   document.getElementById("humidity").innerText = `%${result.main.humidity}`;
 
-  // Arama çubuğunu temizle
   searchBar.value = "";
 };
 
 // Event Listeners
 searchBar.addEventListener("keydown", setQuery);
 searchBtn.addEventListener("click", setQuery);
+
